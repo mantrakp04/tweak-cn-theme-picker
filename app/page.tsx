@@ -24,9 +24,10 @@ import {
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/registry/new-york/ui/tabs"
 import { ChevronDown, Copy, ExternalLink, Eye, Github, Mail, Settings, User, Code } from "lucide-react"
 
-const INSTALL_CODE_NPM = `npx shadcn@latest add https://your-registry.com/r/tweakcn-theme-picker`
-const INSTALL_CODE_BUN = `bunx shadcn@latest add https://your-registry.com/r/tweakcn-theme-picker`
-const INSTALL_CODE_PNPM = `pnpm dlx shadcn@latest add https://your-registry.com/r/tweakcn-theme-picker`
+const REGISTRY_URL = "https://tweak-cn-theme-picker.vercel.app/r/tweakcn-theme-picker.json"
+const INSTALL_CODE_NPM = `npx shadcn@latest add`
+const INSTALL_CODE_BUN = `bunx shadcn@latest add`
+const INSTALL_CODE_PNPM = `pnpm dlx shadcn@latest add`
 
 const USAGE_CODE = `import { ThemePicker } from "@/registry/new-york/blocks/tweakcn-theme-picker/tweakcn-theme-picker"
 import { ThemeProvider } from "@/registry/new-york/blocks/tweakcn-theme-provider/theme-provider"
@@ -61,7 +62,7 @@ function CodeBlock({
     if (pm === "npm") return INSTALL_CODE_NPM
     if (pm === "bun") return INSTALL_CODE_BUN
     if (pm === "pnpm") return INSTALL_CODE_PNPM
-    return code
+    return `${code} ${REGISTRY_URL}`
   }
 
   const displayCode = packageManagers ? getCodeForPm(selectedPm) : code
@@ -162,7 +163,7 @@ export default function Home() {
                 </Button>
                 <Button variant="outline" asChild>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/mantrakp04/tweak-cn-theme-picker"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
