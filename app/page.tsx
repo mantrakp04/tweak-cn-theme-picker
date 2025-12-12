@@ -22,7 +22,8 @@ import {
   DropdownMenuTrigger,
 } from "@/registry/new-york/ui/dropdown-menu"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/registry/new-york/ui/tabs"
-import { ChevronDown, Copy, ExternalLink, Eye, Github, Mail, Settings, User, Code } from "lucide-react"
+import { Badge } from "@/registry/new-york/ui/badge"
+import { ChevronDown, Copy, ExternalLink, Eye, Github, Mail, Settings, User, Code, AlertTriangle } from "lucide-react"
 
 const REGISTRY_URL = "https://tweak-cn-theme-picker.vercel.app/r/tweakcn-theme-picker.json"
 const INSTALL_CODE_NPM = `npx shadcn@latest add ${REGISTRY_URL}`
@@ -130,6 +131,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 py-12">
           <div className="flex items-start justify-between gap-8">
             <div className="flex-1 space-y-4">
+              <Badge variant="outline" className="bg-yellow-500/10 dark:bg-yellow-500/20 border-yellow-500/50 text-yellow-600 dark:text-yellow-500">
+                <AlertTriangle className="h-3 w-3" />
+                WIP
+              </Badge>
               <h1 className="text-4xl font-bold tracking-tight">TweakCN Theme Picker</h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 A beautiful, feature-rich theme picker for shadcn/ui that integrates with{" "}
