@@ -200,7 +200,7 @@ export default function Home() {
                   Code
                 </TabsTrigger>
               </TabsList>
-              <TabsContent value="preview" className="bg-card py-32 rounded-lg">
+              <TabsContent value="preview" className="py-32 rounded-lg bg-muted/50">
                 <div className="flex justify-center">
                   <ThemePicker />
                 </div>
@@ -256,7 +256,7 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" />
+                    <Input id="name" placeholder="Your name"/>
                   </div>
                 </CardContent>
                 <CardFooter className="flex gap-2 justify-end">
